@@ -2,7 +2,13 @@
 
 A bright, fast browser chase game about a Tiger hunting Zebras, herd mates rescuing one another, and a team racing to bank forest leaves. Play Normal, Survival, or online Multiplayer from a browser on Windows, Android, or other modern devices.
 
-![Carnage: Tiger & Zebra](images/tiger-zebra-cover.svg)
+![Carnage: Tiger & Zebra](images/upscalemedia-transformed.png)
+
+## Play online
+
+[Open Carnage: Tiger & Zebra](https://carnage-tiger-zebra.onrender.com/)
+
+Play from the browser on desktop or mobile. Multiplayer uses the hosted game server; friends can join through Quick Match or a room invite.
 
 ## Play locally
 
