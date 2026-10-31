@@ -73,7 +73,7 @@ async function api(req,res,url){
   if(req.method==='POST'&&parts[3]==='team'){
     if(room.status!=='lobby')return error(res,409,'Teams are locked after match start');if(!['ice','water'].includes(data.team))return error(res,400,'Choose Ice or Water');if(data.team==='ice'&&p.team!=='ice'&&[...room.players.values()].filter(q=>q.team==='ice').length>=MAX_ICE_PLAYERS)return error(res,409,'A room can have at most two Ice players; choose Water.');if(data.team==='water'&&p.team!=='water'&&[...room.players.values()].filter(q=>q.team==='water').length>=MAX_PLAYERS-MAX_ICE_PLAYERS)return error(res,409,'A room can have at most six Water players.');p.team=data.team;p.ready=false;p.connected=true;p.lastSeen=Date.now();send(room);json(res,200,pub(room));return true
   }
-  if(req.method==='POST'&&parts[3]==='ready'){if(room.status!=='lobby')return error(res,409,'Lobby is closed');p.ready=!!data.ready;p.connected=true;p.lastSeen=Date.now();if(p.ready){const people=[...room.players.values()];if(people.length>=2&&people.some(q=>q.team==='ice')&&people.some(q=>q.team==='water')&&people.every(q=>q.ready))startRoom(room)}send(room);json(res,200,pub(room));return true}
+  if(req.method==='POST'&&parts[3]==='ready'){if(room.status!=='lobby')return error(res,409,'Lobby is closed');p.ready=!!data.ready;p.connected=true;p.lastSeen=Date.now();send(room);json(res,200,pub(room));return true}
   if(req.method==='POST'&&parts[3]==='start'){
     if(p.id!==room.hostId)return error(res,403,'Only the room host can start');const problem=startRoom(room);if(problem)return error(res,409,problem);send(room);json(res,200,{ok:true});return true
   }
