@@ -1,79 +1,53 @@
-# ❄️ Frost Fall: ICE & Water — Freeze Chase
+# 🐅 Carnage: Tiger & Zebra 🦓
 
-**Collect crystals, rescue your team, and stay ahead of Frost.** Frost Fall is a browser game for Windows and Android. Normal and Survival are bot-supported modes. Multiplayer rooms run from the included Node.js server and can mix human players with AI bots.
+A bright, fast browser chase game about a Tiger hunting Zebras, herd mates rescuing one another, and a team racing to bank forest leaves. Play Normal, Survival, or online Multiplayer from a browser on Windows, Android, or other modern devices.
 
-**Play online:** https://frostfall-ice-vs-water.onrender.com/
+![Carnage: Tiger & Zebra](images/tiger-zebra-cover.svg)
 
-![Frost Fall Home — ICE & Water: Freeze Chase](images/home-screenshot-hd.png)
+## Play locally
 
-## Modes
+- **Windows:** double-click `Run-Game.cmd`; it starts the room server and opens the game.
+- **Quick solo play:** open `index.html` in a modern browser. Normal and Survival run directly from the file.
+- **Online Multiplayer:** host the Node server on a public HTTPS service (for example, Render), then share its HTTPS link. Players on different networks join Quick Match or connect to a room code/link.
 
-| Mode | Setup | Goal |
-|---|---|---|
-| **Normal** | One human-controlled side and AI teammates/opponents | Classic arena chase. Frost hunts across the arena; Water rescues frozen teammates. |
-| **Survival** | One human-controlled side and AI teammates/opponents | Collect and bank crystals on Frozen Land, then finish with Water teammates free. Islands protect one Water player; crowded islands are vulnerable. |
-| **Multiplayer** | 2–8 total characters: humans first, bots fill the selected roster | Join Quick Match or create/connect to a room. A room needs at least **two human players: one Frost and one Water**. Up to two Frost and six Water characters can play. |
+## Game modes
 
-### Survival crystal rules
+### Normal
 
-A four-minute round has eight crystal waves. One crystal appears at 0:00, then a new one appears every 30 seconds through 3:30, replacing any missed crystal. Water must bank six. The final crystal disappears at 3:45; if fewer than six are banked then, Frost wins. Water must also finish with every teammate free. Frost can freeze Water on Frozen Land and on crowded islands.
+Classic full-arena chase. Pick Tiger to hunt the Zebra team, or choose Zebra and work with AI herd mates. Catching freezes a Zebra; active herd mates can rescue them. In this mode, Tiger also wins at time-up if at least two Zebras remain frozen. If the whole Zebra team is caught and nobody can use the team break-free, Tiger wins immediately.
 
-### Energy and scoring
+### Survival
 
-Survival and Multiplayer show separate Frost and Water team energy bars. Each character charges and spends its own meter; your controls use the meter for your selected side/player. Water earns energy from rescues and crystals; Frost has a separate meter for a chase boost. Freed Water players receive temporary freeze protection. Scores are tracked individually: Frost earns points for freezes, Water for crystals and rescues. Team victory follows the mode’s win rules, separately from individual scores.
+Zebras start in small, separated forest groves. Each grove shelters **one Zebra**; if another Zebra enters the same grove, both lose protection and Tiger can hunt them there. Tigers cannot enter an empty or singly occupied safe grove. A caught group on one grove is moved into the forest for rescue. Zebra bots forage leaves, rescue herd mates, and flee or return to safety.
 
-## Multiplayer lobby: player count, bots, and starting
+One glowing leaf patch is active at a time. A fresh patch appears every 30 seconds and replaces the missed one. Collect leaves and carry them to a grove to bank **six of eight** before the final patch expires; finish with every Zebra free to win. One team-wide Zebra break-free can be used if an eligible player has 70% energy; otherwise the all-caught team loses. Zebra gains 50% energy per rescue and 10% per leaf, loses 5% when caught, and uses 70% to break free. Tiger has a separate team meter: freezes charge 30%, spent for a 40% speed burst.
 
-The player-count selector is **inside the joined room lobby**. It controls the total roster, including humans and bots, from 2 to 8.
+### Multiplayer
 
-1. Join through **Quick Match** or create/connect to a private room. Quick Match automatically joins the shared queue; no room code is needed.
-2. At least two humans must be present, with one human on Frost and one on Water. Select teams in the lobby.
-3. The room host chooses **TOTAL PLAYERS (INCLUDING BOTS)** in the lobby. Example: choose 3 with two humans to add one bot. Bots are added when the match starts, not while waiting in the lobby.
-4. Humans may ready up. The match auto-starts when every human is ready and both teams are represented. The host can also press **START MATCH** after those two-human/team requirements are met; the host does not need to wait for every human to ready up.
-5. The server fills remaining slots with Survival-style AI: Frost bots pursue Water; Water bots seek crystals, rescue frozen teammates, and return toward islands.
+Up to **8 characters** share a room: at most **2 Tigers** and **6 Zebras**. At least two human players are needed to start, with one person on each team. The host chooses the total room size in the lobby; AI teammates fill open slots after the humans are assigned. Everyone can ready up, and the host can start once both teams are represented. Team win conditions follow the selected match rules; individual scoreboards rank Tigers by freezes and Zebras by leaves and rescues.
 
-The selected number is a total character count, not a count of additional bots. If the room already has more human players than the selected count, the server keeps the humans and does not remove anyone. The team cap remains two Frost and six Water.
+- **Quick Match** finds a shared internet room.
+- **Create Room** makes a private room and gives you a shareable invite link/code; optional passcodes are supported.
+- **Connect Room** joins using the host’s link or room code and passcode, if set.
 
-## Play on Windows
+Internet play requires a reachable shared server. For local same-Wi-Fi play, clients open the host’s LAN address and port `8787`. Opening the HTML file by itself does not create an internet server.
 
-- **Solo:** Open `index.html` in Chrome, Edge, or Firefox. Use WASD or arrow keys to move, Space for power, and P to pause.
-- **Host nearby multiplayer:** Install Node.js, run `Run-Game.cmd`, and keep the server window open. Other devices open the host laptop’s network address on port 8787. Allow Node.js through Windows Firewall on a private network if prompted.
+## Controls
 
-## Play on Android
+- Move with **WASD** or the **arrow keys**; on touch screens, drag in the arena.
+- Use power with **Space** (or the on-screen power button on Android).
+- Pause with **P** or the pause button.
 
-Open the published link in Chrome for Normal, Survival, or Multiplayer. For a nearby laptop-hosted room, connect to the same Wi-Fi/hotspot and open the host address. Use touch controls in the arena. Google Drive preview does not run HTML games.
+## Hosting the room server
 
-Bluetooth direct play is not implemented in this browser version.
+Install Node.js 20 or newer, then run `npm start` in this folder. The server listens on port `8787`. For a public multiplayer link, deploy this repository to a Node hosting provider and set its start command to `npm start`; share the generated HTTPS URL. A free host may sleep while idle, so its first connection can take a little longer.
 
-## Internet rooms and Quick Match
+## Files
 
-All players must use the same public HTTPS game/server address. Quick Match groups players reaching that server; private rooms use a room invite link and optional passcode. Share the invite link, and send any passcode separately.
+- `index.html` — self-contained game, guide, art, UI, and client code.
+- `server.js` — real-time room server and multiplayer bot/game state.
+- `Run-Game.cmd` — Windows launcher for local hosting.
+- `Start-Remote-Tunnel.cmd` — optional tunnel helper for temporary remote testing.
+- `images/tiger-zebra-cover.svg` — project cover image used here.
 
-The server keeps room and match state in memory. A restart or redeploy ends active rooms, so create a fresh room after a server restart. Free hosting may sleep while idle and may restart; it is suitable for demos, not guaranteed always-on matches.
-
-## Deploy on Render
-
-Deploy the contents of this folder as a **Node Web Service** (not a static site):
-
-| Render setting | Value |
-|---|---|
-| Runtime | Node |
-| Build command | `npm install` |
-| Start command | `npm start` |
-| Root directory | blank when these files are at repository root |
-
-After Render reports **Live**, its HTTPS URL serves both the game and multiplayer API. Test with two devices: join the same server, choose opposite teams, set the lobby roster size, ready/start, and confirm the bot count and match synchronization.
-
-## Project files
-
-- `index.html` — game, animated canvas arena, menus, controls, and visual player guide
-- `server.js` — HTTP/API server, room state, matchmaking, AI bot movement, and authoritative match simulation
-- `package.json` — Node start script and runtime requirement
-- `Run-Game.cmd` — Windows local server launcher
-- `Start-Remote-Tunnel.cmd` — optional temporary internet tunnel
-
-## Developer notes
-
-The server is authoritative for multiplayer positions, collisions, freezes, rescues, crystal waves, scoring, and results. Room endpoints are implemented in `server.js` under `/api/rooms`, `/api/matchmaking/join`, and `/api/rooms/:code/{state,events,join,ready,settings,start,input,leave}`. The browser connects to the same origin using Server-Sent Events for room updates and HTTP POST requests for player input and lobby actions.
-
-Room state is currently in process memory. Scaling to multiple server instances or durable rooms requires shared storage and coordination; do not run this server on multiple instances for a single shared queue.
+The forest reskin keeps the original game mechanics and uses the existing `ice`/`water` team values internally for compatibility. Players only see Tiger and Zebra names in-game.

@@ -1,8 +1,8 @@
 {
-  "name": "ice-vs-water-freeze-chase",
+  "name": "carnage-tiger-zebra",
   "version": "3.0.0",
   "private": true,
-  "description": "Frost Fall: ICE & Water browser game and multiplayer room server",
+  "description": "Carnage: Tiger & Zebra browser game and multiplayer room server",
   "scripts": {
     "start": "node server.js"
   },
