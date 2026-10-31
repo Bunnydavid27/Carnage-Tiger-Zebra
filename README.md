@@ -1,104 +1,77 @@
 # ❄️ Frostfall: Ice vs Water — Freeze Chase
 
-**Chase the crystals. Rescue your crew. Outrun Frost.**
+**Collect crystals, rescue your team, and stay ahead of Frost.** Frostfall is a browser game for Windows and Android. Normal and Survival are bot-supported modes. Multiplayer rooms run from the included Node.js server and can mix human players with AI bots.
 
-A colorful, browser-based team game for Windows and Android. Play solo with AI teammates, or host human-only multiplayer rooms from the included Node.js server. No account or game installation is required to play in a browser.
+**Play online:** https://frostfall-ice-vs-water.onrender.com/
 
-> **Version 3** · One self-contained HTML game · Windows + Android · Normal, Survival, and Multiplayer
+## Modes
 
----
-
-Game link:- https://frostfall-ice-vs-water.onrender.com/
-
-## 🎮 Pick your mode
-
-| Mode | Players | The challenge |
+| Mode | Setup | Goal |
 |---|---|---|
-| **Normal** | You + AI | Classic arena chase. Frost hunts anywhere; Water rescues frozen teammates. |
-| **Survival** | You + AI | Cross Frozen Land for crystals, bank six, and get your whole Water team home free. Islands protect one Water player each; crowded islands can become dangerous. |
-| **Multiplayer** | 2–8 humans | Team up as up to **2 Frost** and **6 Water**. No bots join online rooms. Play in a Quick Match queue or create a private room. |
+| **Normal** | One human-controlled side and AI teammates/opponents | Classic arena chase. Frost hunts across the arena; Water rescues frozen teammates. |
+| **Survival** | One human-controlled side and AI teammates/opponents | Collect and bank crystals on Frozen Land, then finish with Water teammates free. Islands protect one Water player; crowded islands are vulnerable. |
+| **Multiplayer** | 2–8 total characters: humans first, bots fill the selected roster | Join Quick Match or create/connect to a room. A room needs at least **two human players: one Frost and one Water**. Up to two Frost and six Water characters can play. |
 
-### Survival crystal run
+### Survival crystal rules
 
-The four-minute round has **eight chances** to collect crystals. One crystal appears at 0:00, then a new one arrives every 30 seconds through 3:30, replacing the previous one. Collect and bank at least six. The final crystal disappears at 3:45; if fewer than six are banked, Frost wins. Water also needs every teammate free when time runs out. Frost can hunt Water on Frozen Land and on crowded islands.
+A four-minute round has eight crystal waves. One crystal appears at 0:00, then a new one appears every 30 seconds through 3:30, replacing any missed crystal. Water must bank six. The final crystal disappears at 3:45; if fewer than six are banked then, Frost wins. Water must also finish with every teammate free. Frost can freeze Water on Frozen Land and on crowded islands.
 
-### Powers and scoring
+### Energy and scoring
 
-Water gains energy from rescues and crystals. Frost has a separate meter and can spend energy to burst into a faster chase. Rescued Water players blink with temporary freeze protection. The end-of-round card ranks Frost and Water players separately: Frost scores for freezes; Water scores for crystals and rescues.
+Water earns energy from rescues and crystals; Frost has a separate meter for a chase boost. Freed Water players receive temporary freeze protection. Scores are tracked individually: Frost earns points for freezes, Water for crystals and rescues. Team victory follows the mode’s win rules, separately from individual scores.
 
----
+## Multiplayer lobby: player count, bots, and starting
 
-## ▶️ Play on your computer
+The player-count selector is **inside the joined room lobby**. It controls the total roster, including humans and bots, from 2 to 8.
 
-### Solo game
+1. Join through **Quick Match** or create/connect to a private room. Quick Match automatically joins the shared queue; no room code is needed.
+2. At least two humans must be present, with one human on Frost and one on Water. Select teams in the lobby.
+3. The room host chooses **TOTAL PLAYERS (INCLUDING BOTS)** in the lobby. Example: choose 3 with two humans to add one bot. Bots are added when the match starts, not while waiting in the lobby.
+4. Humans may ready up. The match auto-starts when every human is ready and both teams are represented. The host can also press **START MATCH** after those two-human/team requirements are met; the host does not need to wait for every human to ready up.
+5. The server fills remaining slots with Survival-style AI: Frost bots pursue Water; Water bots seek crystals, rescue frozen teammates, and return toward islands.
 
-1. Open `index.html` in Chrome, Edge, or Firefox.
-2. Choose **Normal** or **Survival**, then choose Frost or Water.
-3. Move with **WASD** or the **arrow keys**. Press **Space** to use an available power, and **P** to pause.
+The selected number is a total character count, not a count of additional bots. If the room already has more human players than the selected count, the server keeps the humans and does not remove anyone. The team cap remains two Frost and six Water.
 
-### Multiplayer on the same network
+## Play on Windows
 
-1. Install Node.js on the Windows host computer if it is not already installed.
-2. Run `Run-Game.cmd` from this folder and keep its server window open.
-3. Open the host computer’s Wi-Fi or hotspot address on the other devices, using port **8787**.
-4. In Multiplayer, create a private room and share the room link. Guests open it, choose a team, and connect. For a lobby, everyone must be ready and both teams must be represented.
+- **Solo:** Open `index.html` in Chrome, Edge, or Firefox. Use WASD or arrow keys to move, Space for power, and P to pause.
+- **Host nearby multiplayer:** Install Node.js, run `Run-Game.cmd`, and keep the server window open. Other devices open the host laptop’s network address on port 8787. Allow Node.js through Windows Firewall on a private network if prompted.
 
-If Windows Firewall asks, allow Node.js on the private network. Some phone hotspots block device-to-device traffic; a laptop hotspot or shared Wi-Fi network may work better.
+## Play on Android
 
-### Multiplayer over the Internet
+Open the published link in Chrome for Normal, Survival, or Multiplayer. For a nearby laptop-hosted room, connect to the same Wi-Fi/hotspot and open the host address. Use touch controls in the arena. Google Drive preview does not run HTML games.
 
-The room server must be hosted at a public HTTPS address that every player can reach. For a temporary host-laptop session, run `Run-Game.cmd` and `Start-Remote-Tunnel.cmd`, then share the tunnel URL. The host computer and tunnel must stay running.
+Bluetooth direct play is not implemented in this browser version.
 
-For a persistent public link, deploy this folder as a **Node.js Web Service** (not a static site). The included server serves both the game and multiplayer API from the same origin. See **Deploy on Render** below.
+## Internet rooms and Quick Match
 
-> Browser Bluetooth multiplayer is **not implemented**. Use Wi-Fi / hotspot or the Internet room server.
+All players must use the same public HTTPS game/server address. Quick Match groups players reaching that server; private rooms use a room invite link and optional passcode. Share the invite link, and send any passcode separately.
 
----
+The server keeps room and match state in memory. A restart or redeploy ends active rooms, so create a fresh room after a server restart. Free hosting may sleep while idle and may restart; it is suitable for demos, not guaranteed always-on matches.
 
-## ☁️ Deploy on Render
+## Deploy on Render
 
-1. Put the **contents of this folder** in the root of a GitHub repository and push to the `main` branch.
-2. In Render, select **New → Web Service**, connect GitHub, and choose the repository.
-3. Configure the service:
+Deploy the contents of this folder as a **Node Web Service** (not a static site):
 
-   | Setting | Value |
-   |---|---|
-   | Runtime | Node |
-   | Build command | `npm install` |
-   | Start command | `npm start` |
-   | Instance | Free for a demo, if available |
+| Render setting | Value |
+|---|---|
+| Runtime | Node |
+| Build command | `npm install` |
+| Start command | `npm start` |
+| Root directory | blank when these files are at repository root |
 
-4. Deploy. When Render reports **Live**, open the provided `https://…onrender.com` URL. That same URL is the game page and multiplayer server.
-5. Test with two devices: create a room on one, join with the invite on the other, select teams, ready up, and play.
+After Render reports **Live**, its HTTPS URL serves both the game and multiplayer API. Test with two devices: join the same server, choose opposite teams, set the lobby roster size, ready/start, and confirm the bot count and match synchronization.
 
-The free service may sleep when idle and take about a minute to wake. Active matches can be interrupted by a service restart. This is suitable for demos and testing, not guaranteed always-on hosting. See [Render’s free service limits](https://render.com/docs/free) and [Node deployment guide](https://render.com/docs/deploy-node-express-app).
+## Project files
 
----
+- `index.html` — game, animated canvas arena, menus, controls, and visual player guide
+- `server.js` — HTTP/API server, room state, matchmaking, AI bot movement, and authoritative match simulation
+- `package.json` — Node start script and runtime requirement
+- `Run-Game.cmd` — Windows local server launcher
+- `Start-Remote-Tunnel.cmd` — optional temporary internet tunnel
 
-## 📱 Play on Android
+## Developer notes
 
-- For Normal and Survival, open `index.html` in a browser that can load local HTML files, or use the published website link.
-- For multiplayer, use the host’s reachable server address or the public Render link. Select a team and use touch controls in the arena.
-- Google Drive’s file preview does not run HTML games; download the file and open it in a browser, or use the deployed website link.
+The server is authoritative for multiplayer positions, collisions, freezes, rescues, crystal waves, scoring, and results. Room endpoints are implemented in `server.js` under `/api/rooms`, `/api/matchmaking/join`, and `/api/rooms/:code/{state,events,join,ready,settings,start,input,leave}`. The browser connects to the same origin using Server-Sent Events for room updates and HTTP POST requests for player input and lobby actions.
 
----
-
-## 📂 What’s in this folder
-
-- `index.html` — game, animated arena, controls, and in-page visual guide
-- `server.js` — Node.js server for rooms, matchmaking, and synchronized multiplayer
-- `package.json` — Node start command used by Render
-- `Run-Game.cmd` — starts the local Windows server and opens Multiplayer
-- `Start-Remote-Tunnel.cmd` — optional temporary Internet tunnel helper
-- `README.md` — this guide
-
-## 🧊 Current limitations
-
-- Multiplayer requires a reachable server; opening the HTML file by itself only supports the bot modes.
-- Quick Match is shared only among players connected to the same server.
-- Bluetooth direct play is not available in this browser version.
-- Free hosting can sleep or restart; no always-on or uninterrupted match service is promised.
-
----
-
-**Have fun, watch the shoreline, and don’t leave your teammates frozen.**
+Room state is currently in process memory. Scaling to multiple server instances or durable rooms requires shared storage and coordination; do not run this server on multiple instances for a single shared queue.
