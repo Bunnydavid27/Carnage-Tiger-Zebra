@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+<title id="title">Frostfall: Ice vs Water — Freeze Chase</title><desc id="desc">Illustrated Frost and Water heroes face off in a glowing frozen arena.</desc>
+<defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#173d68"/><stop offset=".55" stop-color="#0b2543"/><stop offset="1" stop-color="#07172e"/></linearGradient><linearGradient id="ice" x2="0" y2="1"><stop stop-color="#e7fcff"/><stop offset=".45" stop-color="#76dfff"/><stop offset="1" stop-color="#268bc6"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#d8fff7"/><stop offset=".52" stop-color="#62eed2"/><stop offset="1" stop-color="#129a9a"/></linearGradient><radialGradient id="glow"><stop stop-color="#52d8ff" stop-opacity=".35"/><stop offset="1" stop-color="#52d8ff" stop-opacity="0"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter></defs>
+<rect width="1200" height="620" rx="34" fill="url(#bg)"/><circle cx="600" cy="325" r="350" fill="url(#glow)"/>
+<path d="M0 470 Q160 400 300 475T600 455T900 470T1200 435V620H0Z" fill="#b7f4ff" opacity=".1"/><path d="M0 520 Q190 458 355 522T700 508T1000 500T1200 485V620H0Z" fill="#48cbd9" opacity=".12"/>
+<g fill="#d9f8ff" opacity=".8"><circle cx="95" cy="95" r="4"/><circle cx="210" cy="168" r="3"/><circle cx="1070" cy="112" r="4"/><circle cx="970" cy="195" r="3"/><circle cx="600" cy="90" r="3"/></g>
+<text x="600" y="96" text-anchor="middle" fill="#8cecff" font-family="Arial,sans-serif" font-weight="700" font-size="16" letter-spacing="8">ONE GAME · TWO TEAMS · INFINITE CHASE</text>
+<text x="600" y="182" text-anchor="middle" fill="#f1fbff" font-family="Arial,sans-serif" font-weight="900" font-size="76" letter-spacing="2">FROSTFALL</text>
+<text x="600" y="235" text-anchor="middle" fill="#74e7ed" font-family="Arial,sans-serif" font-weight="900" font-size="33" letter-spacing="5">ICE <tspan fill="#ffd16b">VS</tspan> WATER</text>
+<text x="600" y="274" text-anchor="middle" fill="#b4cbe1" font-family="Arial,sans-serif" font-size="17" letter-spacing="4">FREEZE CHASE</text>
+<!-- Frost hero -->
+<ellipse cx="318" cy="508" rx="118" ry="22" fill="#54cfff" opacity=".25" filter="url(#shadow)"/><g stroke="#d8faff" stroke-width="5" stroke-linejoin="round">
+<path d="M255 385l-42-22 17 48-38 21 49 10M342 384l42-22-17 48 38 21-49 10M266 334l-23-47 45 21 29-42 19 44 48-14-23 45Z" fill="url(#ice)"/>
+<path d="M246 427q-6-50 28-72 43-29 84 0 35 25 28 74l-14 74q-4 18-22 18h-70q-18 0-22-18Z" fill="url(#ice)"/>
+<path d="M245 445q-39 18-45 58 28 22 63-3M387 445q39 18 45 58-28 22-63-3" fill="#53bce9"/>
+<path d="M273 500l-17 42q30 18 57-1l-7-35M354 500l17 42q-30 18-57-1l7-35" fill="#318ec6"/>
+<ellipse cx="288" cy="414" rx="7" ry="10" fill="#11314c" stroke="none"/><ellipse cx="347" cy="414" rx="7" ry="10" fill="#11314c" stroke="none"/><path d="M298 438q20 22 40 0" fill="none" stroke="#16486e" stroke-width="5"/>
+</g>
+<!-- Water hero -->
+<ellipse cx="882" cy="508" rx="118" ry="22" fill="#49eacb" opacity=".23" filter="url(#shadow)"/><g stroke="#dffff8" stroke-width="5" stroke-linejoin="round">
+<path d="M820 373q-2-75 63-90 63 15 62 90l-10 105q-3 24-25 24h-55q-22 0-25-24Z" fill="url(#water)"/>
+<path d="M814 401q-44 7-50 56 20 34 62 8M949 401q44 7 50 56-20 34-62 8" fill="#35cdb8"/>
+<path d="M829 492l-18 48q31 19 63-1l-7-35M909 492l18 48q-31 19-63-1l7-35" fill="#168e91"/>
+<path d="M837 357q15-57 48-62 38 8 52 62Z" fill="#143c5a"/><path d="M832 357q53-18 106 0l-4 16h-98Z" fill="#56dafa"/>
+<ellipse cx="855" cy="412" rx="7" ry="10" fill="#10334b" stroke="none"/><ellipse cx="912" cy="412" rx="7" ry="10" fill="#10334b" stroke="none"/><path d="M866 437q18 19 36 0" fill="none" stroke="#176d70" stroke-width="5"/>
+</g>
+<circle cx="600" cy="423" r="45" fill="#123a59" stroke="#75eaf0" stroke-width="2"/><text x="600" y="438" text-anchor="middle" fill="#ffd16b" font-family="Arial,sans-serif" font-weight="900" font-size="39">VS</text>
+<g font-family="Arial,sans-serif" font-weight="800" text-anchor="middle"><text x="320" y="585" fill="#8fe4ff" font-size="18" letter-spacing="5">FROST</text><text x="880" y="585" fill="#79f2d5" font-size="18" letter-spacing="5">WATER</text></g>
+<text x="600" y="585" text-anchor="middle" fill="#d6eaff" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">CHASE · FREEZE · RESCUE · SURVIVE</text>
+</svg>

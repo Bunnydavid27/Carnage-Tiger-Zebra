@@ -4,6 +4,8 @@
 
 **Play online:** https://frostfall-ice-vs-water.onrender.com/
 
+![Frostfall Home — Ice vs Water: Freeze Chase](images/home-screenshot.png)
+
 ## Modes
 
 | Mode | Setup | Goal |
