@@ -18,7 +18,7 @@ A four-minute round has eight crystal waves. One crystal appears at 0:00, then a
 
 ### Energy and scoring
 
-Water earns energy from rescues and crystals; Frost has a separate meter for a chase boost. Freed Water players receive temporary freeze protection. Scores are tracked individually: Frost earns points for freezes, Water for crystals and rescues. Team victory follows the mode’s win rules, separately from individual scores.
+Survival and Multiplayer show separate Frost and Water team energy bars. Each character charges and spends its own meter; your controls use the meter for your selected side/player. Water earns energy from rescues and crystals; Frost has a separate meter for a chase boost. Freed Water players receive temporary freeze protection. Scores are tracked individually: Frost earns points for freezes, Water for crystals and rescues. Team victory follows the mode’s win rules, separately from individual scores.
 
 ## Multiplayer lobby: player count, bots, and starting
 
