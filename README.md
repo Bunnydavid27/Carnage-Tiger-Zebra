@@ -8,6 +8,8 @@ A colorful, browser-based team game for Windows and Android. Play solo with AI t
 
 ---
 
+Game link:- https://frostfall-ice-vs-water.onrender.com/
+
 ## 🎮 Pick your mode
 
 | Mode | Players | The challenge |
