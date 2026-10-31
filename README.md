@@ -1,10 +1,10 @@
-# ❄️ Frostfall: Ice vs Water — Freeze Chase
+# ❄️ Frost Fall: ICE & Water — Freeze Chase
 
-**Collect crystals, rescue your team, and stay ahead of Frost.** Frostfall is a browser game for Windows and Android. Normal and Survival are bot-supported modes. Multiplayer rooms run from the included Node.js server and can mix human players with AI bots.
+**Collect crystals, rescue your team, and stay ahead of Frost.** Frost Fall is a browser game for Windows and Android. Normal and Survival are bot-supported modes. Multiplayer rooms run from the included Node.js server and can mix human players with AI bots.
 
 **Play online:** https://frostfall-ice-vs-water.onrender.com/
 
-![Frostfall Home — Ice vs Water: Freeze Chase](images/home-screenshot.png)
+![Frost Fall Home — ICE & Water: Freeze Chase](images/home-screenshot-hd.png)
 
 ## Modes
 

@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
-<title id="title">Frostfall: Ice vs Water — Freeze Chase</title><desc id="desc">Illustrated Frost and Water heroes face off in a glowing frozen arena.</desc>
+<title id="title">Frost Fall: ICE & Water — Freeze Chase</title><desc id="desc">Illustrated Frost and Water heroes face off in a glowing frozen arena.</desc>
 <defs><linearGradient id="bg" x2="0" y2="1"><stop stop-color="#173d68"/><stop offset=".55" stop-color="#0b2543"/><stop offset="1" stop-color="#07172e"/></linearGradient><linearGradient id="ice" x2="0" y2="1"><stop stop-color="#e7fcff"/><stop offset=".45" stop-color="#76dfff"/><stop offset="1" stop-color="#268bc6"/></linearGradient><linearGradient id="water" x2="0" y2="1"><stop stop-color="#d8fff7"/><stop offset=".52" stop-color="#62eed2"/><stop offset="1" stop-color="#129a9a"/></linearGradient><radialGradient id="glow"><stop stop-color="#52d8ff" stop-opacity=".35"/><stop offset="1" stop-color="#52d8ff" stop-opacity="0"/></radialGradient><filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter></defs>
 <rect width="1200" height="620" rx="34" fill="url(#bg)"/><circle cx="600" cy="325" r="350" fill="url(#glow)"/>
 <path d="M0 470 Q160 400 300 475T600 455T900 470T1200 435V620H0Z" fill="#b7f4ff" opacity=".1"/><path d="M0 520 Q190 458 355 522T700 508T1000 500T1200 485V620H0Z" fill="#48cbd9" opacity=".12"/>
 <g fill="#d9f8ff" opacity=".8"><circle cx="95" cy="95" r="4"/><circle cx="210" cy="168" r="3"/><circle cx="1070" cy="112" r="4"/><circle cx="970" cy="195" r="3"/><circle cx="600" cy="90" r="3"/></g>
 <text x="600" y="96" text-anchor="middle" fill="#8cecff" font-family="Arial,sans-serif" font-weight="700" font-size="16" letter-spacing="8">ONE GAME · TWO TEAMS · INFINITE CHASE</text>
-<text x="600" y="182" text-anchor="middle" fill="#f1fbff" font-family="Arial,sans-serif" font-weight="900" font-size="76" letter-spacing="2">FROSTFALL</text>
-<text x="600" y="235" text-anchor="middle" fill="#74e7ed" font-family="Arial,sans-serif" font-weight="900" font-size="33" letter-spacing="5">ICE <tspan fill="#ffd16b">VS</tspan> WATER</text>
+<text x="600" y="182" text-anchor="middle" fill="#f1fbff" font-family="Arial,sans-serif" font-weight="900" font-size="76" letter-spacing="2">FROST FALL</text>
+<text x="600" y="235" text-anchor="middle" fill="#74e7ed" font-family="Arial,sans-serif" font-weight="900" font-size="33" letter-spacing="5">ICE <tspan fill="#ffd16b">&amp;</tspan> WATER</text>
 <text x="600" y="274" text-anchor="middle" fill="#b4cbe1" font-family="Arial,sans-serif" font-size="17" letter-spacing="4">FREEZE CHASE</text>
 <!-- Frost hero -->
 <ellipse cx="318" cy="508" rx="118" ry="22" fill="#54cfff" opacity=".25" filter="url(#shadow)"/><g stroke="#d8faff" stroke-width="5" stroke-linejoin="round">

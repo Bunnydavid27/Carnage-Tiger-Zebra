@@ -2,7 +2,7 @@
   "name": "ice-vs-water-freeze-chase",
   "version": "3.0.0",
   "private": true,
-  "description": "Ice vs Water: Freeze Chase V3 game and multiplayer room server",
+  "description": "Frost Fall: ICE & Water browser game and multiplayer room server",
   "scripts": {
     "start": "node server.js"
   },

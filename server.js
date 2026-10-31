@@ -101,5 +101,5 @@ setInterval(tick,50).unref();
 setInterval(()=>{const now=Date.now();for(const room of rooms.values())for(const res of [...room.listeners]){const p=room.players.get(res.playerId);if(!p)continue;try{res.write(': heartbeat\n\n');p.connected=true;p.lastSeen=now}catch{room.listeners.delete(res);p.connected=false;p.lastSeen=now}}},20000).unref();
 
 const server=http.createServer(async(req,res)=>{const url=new URL(req.url,`http://${req.headers.host||'localhost'}`);try{if(await api(req,res,url))return;if(req.method!=='GET'&&req.method!=='HEAD'){res.writeHead(405);return res.end()}let pathname=decodeURIComponent(url.pathname);if(pathname==='/')pathname='/index.html';const file=path.resolve(ROOT,'.'+pathname);if(!file.startsWith(ROOT+path.sep)){res.writeHead(403);return res.end()}fs.readFile(file,(err,data)=>{if(err){res.writeHead(404);return res.end('Not found')}res.writeHead(200,{'content-type':mime[path.extname(file)]||'application/octet-stream','cache-control':'no-cache'});res.end(req.method==='HEAD'?undefined:data)})}catch(e){error(res,400,e.message)}});
-server.listen(PORT,'0.0.0.0',()=>console.log(`Ice vs Water V3 rooms listening on http://0.0.0.0:${PORT}`));
+server.listen(PORT,'0.0.0.0',()=>console.log(`Frost Fall: ICE & Water rooms listening on http://0.0.0.0:${PORT}`));
 
